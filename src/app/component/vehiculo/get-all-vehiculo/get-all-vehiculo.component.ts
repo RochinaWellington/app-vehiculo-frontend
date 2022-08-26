@@ -3,13 +3,12 @@ import { Vehiculo } from 'src/app/models/vehiculo';
 import { VehiculoService } from 'src/app/services/vehiculo.service';
 
 @Component({
-  selector: 'app-vehiculo',
-  templateUrl: './vehiculo.component.html',
-  styleUrls: ['./vehiculo.component.css']
+  selector: 'app-get-all-vehiculo',
+  templateUrl: './get-all-vehiculo.component.html',
+  styleUrls: ['./get-all-vehiculo.component.css']
 })
-export class VehiculoComponent implements OnInit {
-vehiculos:Vehiculo[]=[];
-
+export class GetAllVehiculoComponent implements OnInit {
+  vehiculos:Vehiculo[]=[];
   constructor(private vehiculoService:VehiculoService) { }
 
   ngOnInit(): void {

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { VehiculoComponent } from './component/vehiculo/vehiculo.component';
+import { GetAllVehiculoComponent } from './component/vehiculo/get-all-vehiculo/get-all-vehiculo.component';
 
 const routes: Routes = [
  {
   path:'',
-  component:VehiculoComponent
+  component:GetAllVehiculoComponent
  }
 ];
 
