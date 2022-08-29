@@ -12,11 +12,16 @@ export class GetAllVehiculoComponent implements OnInit {
   constructor(private vehiculoService:VehiculoService) { }
 
   ngOnInit(): void {
+   this.getVehiculos()
+
+  }
+  
+  getVehiculos(): void{
     this.vehiculoService.getAllVehiculo()
     .subscribe({
       next: (vehiculo) => {
         this.vehiculos=vehiculo;
-        console.log(vehiculo)
+        
         
       },
       error: (response) =>{
@@ -24,7 +29,7 @@ export class GetAllVehiculoComponent implements OnInit {
       }
       
     })
-
   }
+
 
 }
