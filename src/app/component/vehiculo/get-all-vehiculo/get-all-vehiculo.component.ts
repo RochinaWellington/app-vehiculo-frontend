@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Vehiculo } from 'src/app/models/vehiculo';
 import { VehiculoService } from 'src/app/services/vehiculo.service';
 
@@ -9,7 +10,7 @@ import { VehiculoService } from 'src/app/services/vehiculo.service';
 })
 export class GetAllVehiculoComponent implements OnInit {
   vehiculos:Vehiculo[]=[];
-  constructor(private vehiculoService:VehiculoService) { }
+  constructor(private vehiculoService:VehiculoService,private router:Router) { }
 
   ngOnInit(): void {
    this.getVehiculos()
@@ -30,6 +31,8 @@ export class GetAllVehiculoComponent implements OnInit {
       
     })
   }
-
+masInformacion(){
+  this.router.navigate([''])
+}
 
 }

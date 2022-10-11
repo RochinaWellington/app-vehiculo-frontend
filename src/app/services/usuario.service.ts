@@ -11,8 +11,8 @@ export class UsuarioService {
   private baseApiUrl=environment.API_BASE_URL;
   constructor(private http:HttpClient) { }
 
-  getOneUsuario(): Observable<Usuario>{
-    return this.http.get<Usuario>(this.baseApiUrl+'/usuario/5')
+  getOneUsuario(id:number): Observable<Usuario>{
+    return this.http.get<Usuario>(this.baseApiUrl+'/usuario/5'+id)
 
   }
 }
