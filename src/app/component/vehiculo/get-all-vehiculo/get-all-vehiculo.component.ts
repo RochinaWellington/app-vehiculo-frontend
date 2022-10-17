@@ -10,6 +10,7 @@ import { VehiculoService } from 'src/app/services/vehiculo.service';
 })
 export class GetAllVehiculoComponent implements OnInit {
   vehiculos:Vehiculo[]=[];
+  datoCargado:Boolean=false
   constructor(private vehiculoService:VehiculoService,private router:Router) { }
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class GetAllVehiculoComponent implements OnInit {
     .subscribe({
       next: (vehiculo) => {
         this.vehiculos=vehiculo;
-        
+        this.datoCargado=true
         
       },
       error: (response) =>{
