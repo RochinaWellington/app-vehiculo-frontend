@@ -12,11 +12,10 @@
           src="https://res.cloudinary.com/dyz9b5bfs/image/upload/v1658082493/vehiculos/f3ycdobawsleabafnwhp.jpg" />
         <div class="p-1 text-black rounded-b-lg">
   
-          <h5 class="text-md font-bold">FOR </h5>
+          <h5 class="text-md font-bold">{{vehiculo.mac_nombre}}</h5>
           <p class="mt-1 text-xs font-medium text-red-600">{{vehiculo.veh_precio}}$</p>
-          <p class="mt-2 text-sm text-gray-500 text-justify h-20 overflow-auto ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+          <p class="mt-2 text-sm text-gray-500 text-justify h-20 overflow-hidden ">
+            {{vehiculo.veh_descripcion}}
           </p>
           <dl class="flex mt-6 justify-between text-center">
             <div class="flex flex-col-reverse">
