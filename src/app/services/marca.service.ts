@@ -11,8 +11,8 @@ export class MarcaService {
   private baseApiUrl=environment.API_BASE_URL;
   constructor(private http:HttpClient) { }
 
-  getOneMarca(): Observable<Marca>{
-    return this.http.get<Marca>(this.baseApiUrl+'/marca/8')
+  getOneMarca(id:number): Observable<Marca>{
+    return this.http.get<Marca>(this.baseApiUrl+`/marca/${id}`)
 
   }
 }

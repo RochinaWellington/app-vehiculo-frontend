@@ -15,8 +15,8 @@ export class VehiculoService {
     return this.http.get<Vehiculo[]>(this.baseApiUrl+'/vehiculo')
 
   }
-  getOneVehiculo(): Observable<Vehiculo>{
-    return this.http.get<Vehiculo>(this.baseApiUrl+'/vehiculo/3')
+  getOneVehiculo(id:number): Observable<Vehiculo>{
+    return this.http.get<Vehiculo>(this.baseApiUrl+'/vehiculo/'+id)
 
   }
 
