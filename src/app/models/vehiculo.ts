@@ -11,5 +11,6 @@ export interface Vehiculo {
     veh_anio: number;
     veh_estadovendido: boolean;
     veh_estadoeliminado: boolean;
+    mac_nombre:string;
     
 }
