@@ -12,7 +12,7 @@ export class UsuarioService {
   constructor(private http:HttpClient) { }
 
   getOneUsuario(id:number): Observable<Usuario>{
-    return this.http.get<Usuario>(this.baseApiUrl+'/usuario/5'+id)
+    return this.http.get<Usuario>(this.baseApiUrl+'/usuario/'+id)
 
   }
 }
